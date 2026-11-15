@@ -1,0 +1,94 @@
+        SUMMARY OF THE HDF5 CONFIGURATION
+        =================================
+
+General Information:
+-------------------
+                   HDF5 Version: 2.1.1
+                  Configured on: 2026-11-15
+                  Configured by: Ninja
+                    Host system: Linux-6.18.58.1-microsoft-standard-WSL2
+              Uname information: Linux
+                       Byte sex: little-endian
+             Installation point: /usr/local
+
+Compiling Options:
+------------------
+                     Build Mode: Release
+              Debugging Symbols: OFF
+                        Asserts: OFF
+                      Profiling: OFF
+             Optimization Level: OFF
+
+Linking Options:
+----------------
+                      Libraries: 
+  Statically Linked Executables: OFF
+                        LDFLAGS:  -Wl,-lc  
+                     H5_LDFLAGS: 
+                     AM_LDFLAGS: 
+                Extra libraries: m;dl;Threads::Threads
+                       Archiver: /usr/bin/ar
+                       AR_FLAGS:
+                         Ranlib: /usr/bin/ranlib
+
+Languages:
+----------
+                              C: YES
+                     C Compiler: /usr/bin/cc 15.2.0
+                       CPPFLAGS: 
+                    H5_CPPFLAGS: 
+                    AM_CPPFLAGS: 
+                         CFLAGS:   -std=c11   -fstdarg-opt -fmessage-length=0 -O3 -DNDEBUG
+                      H5_CFLAGS: -Wall;-Wcast-qual;-Wconversion;-Wextra;-Wfloat-equal;-Wformat=2;-Wformat-nonliteral;-Winit-self;-Winvalid-pch;-Wmissing-include-dirs;-Wshadow;-Wundef;-Wwrite-strings;-pedantic;-Wno-c++-compat
+                      AM_CFLAGS: 
+               Shared C Library: ON
+               Static C Library: OFF
+
+                        Fortran: OFF
+               Fortran Compiler:  
+                  Fortran Flags:  
+               H5 Fortran Flags: 
+               AM Fortran Flags: 
+         Shared Fortran Library: ON
+         Static Fortran Library: OFF
+               Module Directory: 
+
+                            C++: OFF
+                   C++ Compiler: /usr/bin/c++ 15.2.0
+                      C++ Flags:   
+                   H5 C++ Flags: 
+                   AM C++ Flags: 
+             Shared C++ Library: ON
+             Static C++ Library: OFF
+
+                           JAVA: OFF
+                  JAVA Compiler:  
+
+Features:
+---------
+                     Parallel HDF5: OFF
+  Parallel Filtered Dataset Writes: 
+                Large Parallel I/O: 
+                High-level library: ON
+Dimension scales w/ new references: 
+                  Build HDF5 Tests: OFF
+                  Build HDF5 Tools: OFF
+                           Threads: ON
+                      Threadsafety: OFF
+                       Concurrency: OFF
+               Default API mapping: v200
+    With deprecated public symbols: ON
+            I/O filters (external):  DEFLATE
+                  _Float16 support: OFF
+                     Map (H5M) API: OFF
+                        Direct VFD: OFF
+                        Mirror VFD: OFF
+                     Subfiling VFD: OFF
+                (Read-Only) S3 VFD: OFF
+              (Read-Only) HDFS VFD: OFF
+    Packages w/ extra debug output: 
+                       API Tracing: OFF
+              Using memory checker: OFF
+                  Use file locking: best-effort
+         Strict File Format Checks: OFF
+      Optimization Instrumentation: 

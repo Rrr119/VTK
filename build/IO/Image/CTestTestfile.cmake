@@ -1,0 +1,8 @@
+# CMake generated Testfile for 
+# Source directory: /home/dev/feedback/uid19920/IO/Image
+# Build directory: /home/dev/feedback/uid19920/build/IO/Image
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[VTK::IOImage-HeaderTest]=] "/home/dev/.local/bin/python" "/home/dev/feedback/uid19920/Testing/Core/HeaderTesting.py" "/home/dev/feedback/uid19920/IO/Image" "--export-macro" "" "--headers" "vtkBMPReader.h;vtkBMPWriter.h;vtkDEMReader.h;vtkDICOMImageReader.h;vtkGESignaReader.h;vtkHDRReader.h;vtkImageExport.h;vtkImageImport.h;vtkImageImportExecutive.h;vtkImageReader.h;vtkImageReader2.h;vtkImageReader2Collection.h;vtkImageReader2Factory.h;vtkImageWriter.h;vtkJPEGReader.h;vtkJPEGWriter.h;vtkJSONImageWriter.h;vtkMedicalImageProperties.h;vtkMedicalImageReader2.h;vtkMetaImageReader.h;vtkMetaImageWriter.h;vtkMRCReader.h;vtkNIFTIImageHeader.h;vtkNIFTIImageReader.h;vtkNIFTIImageWriter.h;vtkNrrdReader.h;vtkOMETIFFReader.h;vtkPNGReader.h;vtkPNGWriter.h;vtkPNMReader.h;vtkPNMWriter.h;vtkPostScriptWriter.h;vtkSEPReader.h;vtkSLCReader.h;vtkTGAReader.h;vtkTIFFReader.h;vtkTIFFWriter.h;vtkVolume16Reader.h;vtkVolumeReader.h" "/home/dev/feedback/uid19920/build/IO/Image/vtkIOImageModule.h" "")
+set_tests_properties([=[VTK::IOImage-HeaderTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4866;add_test;/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4761;_vtk_module_add_header_tests;/home/dev/feedback/uid19920/IO/Image/CMakeLists.txt;46;vtk_module_add_module;/home/dev/feedback/uid19920/IO/Image/CMakeLists.txt;0;")

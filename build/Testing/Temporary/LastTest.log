@@ -1,0 +1,25 @@
+Start testing: Nov 15 18:30 CST
+----------------------------------------------------------
+246/2406 Testing: VTK::RenderingVolumeOpenGL2Cxx-TestGPURayCastTFClipping
+246/2406 Test: VTK::RenderingVolumeOpenGL2Cxx-TestGPURayCastTFClipping
+Command: "/home/dev/feedback/uid19920/build/bin/vtkRenderingVolumeOpenGL2CxxTests" "TestGPURayCastTFClipping" "-D" "/home/dev/feedback/uid19920/build/ExternalData/Testing" "-T" "/home/dev/feedback/uid19920/build/Testing/Temporary" "-V" "/home/dev/feedback/uid19920/Rendering/VolumeOpenGL2/Testing/Data/Baseline/TestGPURayCastTFClipping.png"
+Directory: /home/dev/feedback/uid19920/build/Rendering/VolumeOpenGL2/Testing/Cxx
+"VTK::RenderingVolumeOpenGL2Cxx-TestGPURayCastTFClipping" start time: Nov 15 18:30 CST
+Output:
+----------------------------------------------------------
+[0m[2m(   0.040s) [main thread     ]   vtkEGLMesaConfig.cxx:10    INFO| [0mvtkEGLMesaConfig created for Mesa offscreen rendering[0m
+[0m[2m(   0.063s) [main thread     ]   vtkEGLMesaConfig.cxx:10    INFO| [0mvtkEGLMesaConfig created for Mesa offscreen rendering[0m
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"VTK::RenderingVolumeOpenGL2Cxx-TestGPURayCastTFClipping" end time: Nov 15 18:30 CST
+"VTK::RenderingVolumeOpenGL2Cxx-TestGPURayCastTFClipping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 15 18:30 CST
+
+VTK::RenderingVolumeOpenGL2 =   0.31 sec*proc
+
+vtkRenderingVolumeOpenGL2 =   0.31 sec*proc
+

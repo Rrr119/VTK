@@ -1,0 +1,2 @@
+#define vtkRenderingCore_AUTOINIT 1(vtkInteractionStyle)
+#define vtkRenderingOpenGL2_AUTOINIT 1(vtkRenderingGL2PSOpenGL2)

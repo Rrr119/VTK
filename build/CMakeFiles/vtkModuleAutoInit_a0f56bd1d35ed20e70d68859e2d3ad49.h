@@ -1,0 +1,3 @@
+#define vtkFiltersCore_AUTOINIT 1(vtkFiltersParallel)
+#define vtkRenderingCore_AUTOINIT 2(vtkRenderingOpenGL2,vtkRenderingVRModels)
+#define vtkRenderingLabel_AUTOINIT 1(vtkRenderingOpenGL2)

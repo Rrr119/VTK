@@ -1,0 +1,8 @@
+# CMake generated Testfile for 
+# Source directory: /home/dev/feedback/uid19920/Views/Infovis
+# Build directory: /home/dev/feedback/uid19920/build/Views/Infovis
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[VTK::ViewsInfovis-HeaderTest]=] "/home/dev/.local/bin/python" "/home/dev/feedback/uid19920/Testing/Core/HeaderTesting.py" "/home/dev/feedback/uid19920/Views/Infovis" "--export-macro" "" "--headers" "vtkApplyColors.h;vtkApplyIcons.h;vtkDendrogramItem.h;vtkGraphItem.h;vtkGraphLayoutView.h;vtkHeatmapItem.h;vtkHierarchicalGraphPipeline.h;vtkHierarchicalGraphView.h;vtkIcicleView.h;vtkInteractorStyleAreaSelectHover.h;vtkInteractorStyleTreeMapHover.h;vtkParallelCoordinatesHistogramRepresentation.h;vtkParallelCoordinatesRepresentation.h;vtkParallelCoordinatesView.h;vtkRenderedGraphRepresentation.h;vtkRenderedHierarchyRepresentation.h;vtkRenderedRepresentation.h;vtkRenderedSurfaceRepresentation.h;vtkRenderedTreeAreaRepresentation.h;vtkRenderView.h;vtkSCurveSpline.h;vtkTanglegramItem.h;vtkTreeAreaView.h;vtkTreeHeatmapItem.h;vtkTreeMapView.h;vtkTreeRingView.h;vtkViewUpdater.h" "/home/dev/feedback/uid19920/build/Views/Infovis/vtkViewsInfovisModule.h" "")
+set_tests_properties([=[VTK::ViewsInfovis-HeaderTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4866;add_test;/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4761;_vtk_module_add_header_tests;/home/dev/feedback/uid19920/Views/Infovis/CMakeLists.txt;31;vtk_module_add_module;/home/dev/feedback/uid19920/Views/Infovis/CMakeLists.txt;0;")

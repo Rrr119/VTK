@@ -1,0 +1,130 @@
+Performing Other Test HAVE_TM_ZONE failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_42cce
+[1/2] /usr/bin/cc   -fPIE   -DHAVE_TM_ZONE  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_SOCKET_H -o CMakeFiles/cmTC_42cce.dir/HDFTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/HDFTests.c
+[2/2] : && /usr/bin/cc  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_42cce.dir/HDFTests.c.o -o cmTC_42cce  -lm  -ldl && :
+FAILED: [code=1] cmTC_42cce 
+: && /usr/bin/cc  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_42cce.dir/HDFTests.c.o -o cmTC_42cce  -lm  -ldl && :
+/usr/bin/x86_64-linux-gnu-ld.bfd: /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Performing Other Test HAVE_STRUCT_TM_TM_ZONE failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_9cb6f
+[1/2] /usr/bin/cc   -fPIE   -DHAVE_STRUCT_TM_TM_ZONE  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_SOCKET_H -o CMakeFiles/cmTC_9cb6f.dir/HDFTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/HDFTests.c
+[2/2] : && /usr/bin/cc  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_9cb6f.dir/HDFTests.c.o -o cmTC_9cb6f  -lm  -ldl && :
+FAILED: [code=1] cmTC_9cb6f 
+: && /usr/bin/cc  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_9cb6f.dir/HDFTests.c.o -o cmTC_9cb6f  -lm  -ldl && :
+/usr/bin/x86_64-linux-gnu-ld.bfd: /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Performing Other Test HAVE_BUILTIN_EXPECT failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_e0740
+[1/2] /usr/bin/cc   -fPIE   -DHAVE_BUILTIN_EXPECT  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_SOCKET_H -o CMakeFiles/cmTC_e0740.dir/HDFTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/HDFTests.c
+[2/2] : && /usr/bin/cc  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_e0740.dir/HDFTests.c.o -o cmTC_e0740  -lm  -ldl && :
+FAILED: [code=1] cmTC_e0740 
+: && /usr/bin/cc  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_e0740.dir/HDFTests.c.o -o cmTC_e0740  -lm  -ldl && :
+/usr/bin/x86_64-linux-gnu-ld.bfd: /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Performing Other Test HAVE_STDC_NO_COMPLEX failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_0086d
+[1/2] /usr/bin/cc   -fPIE   -DHAVE_STDC_NO_COMPLEX  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_SOCKET_H -o CMakeFiles/cmTC_0086d.dir/HDFTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/HDFTests.c
+FAILED: [code=1] CMakeFiles/cmTC_0086d.dir/HDFTests.c.o 
+/usr/bin/cc   -fPIE   -DHAVE_STDC_NO_COMPLEX  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_SOCKET_H -o CMakeFiles/cmTC_0086d.dir/HDFTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/HDFTests.c
+/home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/HDFTests.c:101:2: error: #error "__STDC_NO_COMPLEX__ not defined"
+  101 | #error "__STDC_NO_COMPLEX__ not defined"
+      |  ^~~~~
+ninja: build stopped: subcommand failed.
+
+
+Test H5_LDOUBLE_TO_LONG_SPECIAL Compile succeeded with the following output:
+ Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_a4f2b
+[1/2] /usr/bin/cc   -DH5_LDOUBLE_TO_LONG_SPECIAL_TEST -fPIE -o CMakeFiles/cmTC_a4f2b.dir/ConversionTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/ConversionTests.c
+[2/2] : && /usr/bin/cc -DH5_LDOUBLE_TO_LONG_SPECIAL_TEST -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_a4f2b.dir/ConversionTests.c.o -o cmTC_a4f2b   && :
+
+
+Test H5_LDOUBLE_TO_LONG_SPECIAL Run failed with exit code 1 and with the following output:
+ 
+Test H5_LONG_TO_LDOUBLE_SPECIAL Compile succeeded with the following output:
+ Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_a26fb
+[1/2] /usr/bin/cc   -DH5_LONG_TO_LDOUBLE_SPECIAL_TEST -fPIE -o CMakeFiles/cmTC_a26fb.dir/ConversionTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/ConversionTests.c
+[2/2] : && /usr/bin/cc -DH5_LONG_TO_LDOUBLE_SPECIAL_TEST -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_a26fb.dir/ConversionTests.c.o -o cmTC_a26fb   && :
+
+
+Test H5_LONG_TO_LDOUBLE_SPECIAL Run failed with exit code 1 and with the following output:
+ 
+Test H5_DISABLE_SOME_LDOUBLE_CONV Compile succeeded with the following output:
+ Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_51797
+[1/2] /usr/bin/cc   -DH5_DISABLE_SOME_LDOUBLE_CONV_TEST -fPIE -o CMakeFiles/cmTC_51797.dir/ConversionTests.c.o -c /home/dev/feedback/uid19920/ThirdParty/hdf5/vtkhdf5/config/ConversionTests.c
+[2/2] : && /usr/bin/cc -DH5_DISABLE_SOME_LDOUBLE_CONV_TEST -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_51797.dir/ConversionTests.c.o -o cmTC_51797   && :
+
+
+Test H5_DISABLE_SOME_LDOUBLE_CONV Run failed with exit code 1 and with the following output:
+ 
+Determining if the HDF5 Multi_Dataset exists failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_45e3c
+[1/2] /usr/bin/cc   -std=gnu99 -fPIE -o CMakeFiles/cmTC_45e3c.dir/test_HDF.c.o -c /home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c
+FAILED: [code=1] CMakeFiles/cmTC_45e3c.dir/test_HDF.c.o 
+/usr/bin/cc   -std=gnu99 -fPIE -o CMakeFiles/cmTC_45e3c.dir/test_HDF.c.o -c /home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c
+/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c:2:11: fatal error: hdf5.h: No such file or directory
+    2 |  #include "hdf5.h"
+      |           ^~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the HDF5 Collective_metadata exists failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_e2608
+[1/2] /usr/bin/cc   -std=gnu99 -fPIE -o CMakeFiles/cmTC_e2608.dir/test_HDF.c.o -c /home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c
+FAILED: [code=1] CMakeFiles/cmTC_e2608.dir/test_HDF.c.o 
+/usr/bin/cc   -std=gnu99 -fPIE -o CMakeFiles/cmTC_e2608.dir/test_HDF.c.o -c /home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c
+/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c:2:11: fatal error: hdf5.h: No such file or directory
+    2 |  #include "hdf5.h"
+      |           ^~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the HDF5 H5Pset_file_space_strategy exists failed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_c6b60
+[1/2] /usr/bin/cc   -std=gnu99 -fPIE -o CMakeFiles/cmTC_c6b60.dir/test_HDF.c.o -c /home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c
+FAILED: [code=1] CMakeFiles/cmTC_c6b60.dir/test_HDF.c.o 
+/usr/bin/cc   -std=gnu99 -fPIE -o CMakeFiles/cmTC_c6b60.dir/test_HDF.c.o -c /home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c
+/home/dev/feedback/uid19920/build/CMakeFiles/CMakeTmp/test_HDF.c:2:11: fatal error: hdf5.h: No such file or directory
+    2 |  #include "hdf5.h"
+      |           ^~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+

@@ -62,6 +62,11 @@ inline bool UseClippedVoxelIntensity(vtkOpenGLGPUVolumeRayCastMapper::VolumeInpu
   return false;
 }
 
+inline bool UseTFClipping(vtkVolume* vol)
+{
+  return vol && vol->GetProperty() && vol->GetProperty()->GetTFClipping() == 1;
+}
+
 inline std::string ArrayBaseName(const std::string& arrayName)
 {
   return arrayName.substr(0, arrayName.length() - 3);
@@ -1962,12 +1967,17 @@ inline std::string ComputeGradientOpacityMulti1DDecl(
 
 //--------------------------------------------------------------------------
 inline std::string ComputeOpacityDeclaration(vtkRenderer* vtkNotUsed(ren),
-  vtkVolumeMapper* vtkNotUsed(mapper), vtkVolume* vtkNotUsed(vol), int noOfComponents,
+  vtkVolumeMapper* vtkNotUsed(mapper), vtkVolume* vol, int noOfComponents,
   int independentComponents, std::map<int, std::string> opacityTableMap)
 {
   std::ostringstream ss;
   ss << "uniform sampler2D " << ArrayBaseName(opacityTableMap[0]) << "[" << noOfComponents
      << "];\n";
+
+  if (UseTFClipping(vol))
+  {
+    ss << "uniform float in_tfClippingThreshold;\n";
+  }
 
   std::string shaderStr = ss.str();
   if (noOfComponents > 1 && independentComponents)
@@ -2141,10 +2151,14 @@ inline std::string Transfer2DDeclaration(vtkOpenGLGPUVolumeRayCastMapper::Volume
 
 //--------------------------------------------------------------------------
 inline std::string ComputeOpacity2DDeclaration(vtkRenderer* vtkNotUsed(ren),
-  vtkVolumeMapper* vtkNotUsed(mapper), vtkVolume* vtkNotUsed(vol), int noOfComponents,
+  vtkVolumeMapper* vtkNotUsed(mapper), vtkVolume* vol, int noOfComponents,
   int independentComponents, std::map<int, std::string> opacityTableMap, int useGradient)
 {
   std::ostringstream toString;
+  if (UseTFClipping(vol))
+  {
+    toString << "uniform float in_tfClippingThreshold;\n";
+  }
   if (noOfComponents > 1 && independentComponents)
   {
     // Multiple independent components
@@ -2621,12 +2635,16 @@ inline std::string ShadingMultipleInputs(
 
 //--------------------------------------------------------------------------
 inline std::string ShadingSingleInput(vtkRenderer* vtkNotUsed(ren), vtkVolumeMapper* mapper,
-  vtkVolume* vtkNotUsed(vol), vtkImageData* maskInput, vtkVolumeTexture* mask, int maskType,
+  vtkVolume* vol, vtkImageData* maskInput, vtkVolumeTexture* mask, int maskType,
   int noOfComponents, int independentComponents = 0)
 {
   auto glMapper = vtkOpenGLGPUVolumeRayCastMapper::SafeDownCast(mapper);
 
   std::string shaderStr;
+
+  // Transfer function clipping: discard samples whose opacity, as mapped by
+  // the scalar opacity transfer function, is below the user-defined threshold.
+  const bool tfClipping = UseTFClipping(vol);
 
   shaderStr += std::string("\
       \n    if (!g_skip)\
@@ -2938,7 +2956,17 @@ inline std::string ShadingSingleInput(vtkRenderer* vtkNotUsed(ren), vtkVolumeMap
         shaderStr += std::string("\
           \n        // Data fetching from the red channel of volume texture\
           \n        color[i][3] = computeOpacity(scalar, i);\
-          \n        color[i] = computeColor(scalar, color[i][3], i);\
+          \n        color[i] = computeColor(scalar, color[i][3], i);");
+        if (tfClipping)
+        {
+          shaderStr += std::string("\
+          \n        // Clip the sample based on the transfer function opacity\
+          \n        if (color[i][3] < in_tfClippingThreshold)\
+          \n          {\
+          \n          color[i][3] = 0.0;\
+          \n          }");
+        }
+        shaderStr += std::string("\
           \n        totalAlpha += color[i][3] * in_componentWeight[i];\
           \n        }\
           \n      if (totalAlpha > 0.0)\
@@ -2974,6 +3002,15 @@ inline std::string ShadingSingleInput(vtkRenderer* vtkNotUsed(ren), vtkVolumeMap
              \n      if (g_srcColor.a > 0.0)\
              \n        {\
              \n        g_srcColor = computeColor(scalar, g_srcColor.a);");
+        if (tfClipping)
+        {
+          shaderStr += std::string("\
+             \n        // Clip the sample based on the transfer function opacity\
+             \n        if (g_srcColor.a < in_tfClippingThreshold)\
+             \n          {\
+             \n          g_srcColor.a = 0.0;\
+             \n          }");
+        }
       }
 
       shaderStr += std::string("\

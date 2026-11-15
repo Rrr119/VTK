@@ -1,0 +1,5 @@
+# ninja log v7
+0	1000	1794738210492325992	CMakeFiles/TFClippingExample.dir/TFClippingExample.cxx.o	ce3706068279dbae
+1000	1098	1794738211498118873	bin/TFClippingExample	f3f39cc1f7d5703c
+4	1027	1794738378560326881	CMakeFiles/TFClippingExample.dir/TFClippingExample.cxx.o	ce3706068279dbae
+1027	1131	1794738379584326974	bin/TFClippingExample	f3f39cc1f7d5703c

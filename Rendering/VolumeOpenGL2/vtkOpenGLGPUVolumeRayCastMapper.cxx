@@ -3822,6 +3822,14 @@ void vtkOpenGLGPUVolumeRayCastMapper::vtkInternal::SetAdvancedShaderParameters(v
   // Component weights (independent components)
   auto volProperty = vol->GetProperty();
   float fvalue4[4];
+
+  // Transfer function clipping (single input only, see vtkVolumeProperty::TFClipping)
+  if (volProperty->GetTFClipping() && !this->MultiVolume)
+  {
+    prog->SetUniformf(
+      "in_tfClippingThreshold", static_cast<float>(volProperty->GetTFClippingThreshold()));
+  }
+
   if (numComp > 1 && volProperty->GetIndependentComponents())
   {
     for (int i = 0; i < numComp; ++i)

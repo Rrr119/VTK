@@ -1,0 +1,3 @@
+#define vtkDomainsChemistry_AUTOINIT 1(vtkDomainsChemistryOpenGL2)
+#define vtkRenderingCore_AUTOINIT 2(vtkInteractionStyle,vtkRenderingOpenGL2)
+#define vtkRenderingLabel_AUTOINIT 1(vtkRenderingOpenGL2)

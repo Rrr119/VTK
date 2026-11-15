@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/dev/feedback/uid19920/build-example/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

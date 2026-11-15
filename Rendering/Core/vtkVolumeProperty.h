@@ -507,6 +507,43 @@ public:
 
   ///@{
   /**
+   * Set/Get whether to clip (discard) volume samples based on the opacity
+   * transfer function(s). When enabled, every sample whose opacity - as
+   * mapped by the scalar opacity transfer function and, when active, the
+   * gradient opacity transfer function - is strictly lower than
+   * TFClippingThreshold is skipped during ray casting. This produces sharp
+   * cut surfaces along the opacity boundaries of the transfer function,
+   * without having to modify the transfer function itself. It composes with
+   * the regular (geometric) clipping planes set on the mapper, so multiple
+   * clip planes can be combined with transfer function clipping.
+   * By default, this is false.
+   *
+   * \note This property is only used by the vtkGPUVolumeRayCastMapper for
+   * now, and only for the composite blend mode. It is ignored when rendering
+   * multiple volumes (vtkMultiVolume) or label maps.
+   * \sa SetTFClippingThreshold, vtkAbstractMapper3D::SetClippingPlanes
+   */
+  vtkSetMacro(TFClipping, vtkTypeBool);
+  vtkGetMacro(TFClipping, vtkTypeBool);
+  vtkBooleanMacro(TFClipping, vtkTypeBool);
+  ///@}
+
+  ///@{
+  /**
+   * Set/Get the opacity threshold, in the range [0, 1], used when TFClipping
+   * is enabled. Samples mapping to an opacity strictly lower than this value
+   * are discarded. A threshold of 0 disables the effect while a threshold of
+   * 1 discards every sample that is not fully opaque. Default is 0.5.
+   *
+   * \note This value is only used when TFClipping is true.
+   * \sa SetTFClipping
+   */
+  vtkSetClampMacro(TFClippingThreshold, double, 0.0, 1.0);
+  vtkGetMacro(TFClippingThreshold, double);
+  ///@}
+
+  ///@{
+  /**
    * Set/Get the color transfer function for a label in the label map.
    */
   void SetLabelColor(int label, vtkColorTransferFunction* function);
@@ -613,6 +650,9 @@ protected:
 
   double ClippedVoxelIntensity;
   int UseClippedVoxelIntensity;
+
+  vtkTypeBool TFClipping;
+  double TFClippingThreshold;
 
   /**
    * Contour values for isosurface blend mode

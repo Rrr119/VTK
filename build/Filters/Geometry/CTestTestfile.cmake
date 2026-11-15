@@ -1,0 +1,8 @@
+# CMake generated Testfile for 
+# Source directory: /home/dev/feedback/uid19920/Filters/Geometry
+# Build directory: /home/dev/feedback/uid19920/build/Filters/Geometry
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[VTK::FiltersGeometry-HeaderTest]=] "/home/dev/.local/bin/python" "/home/dev/feedback/uid19920/Testing/Core/HeaderTesting.py" "/home/dev/feedback/uid19920/Filters/Geometry" "--export-macro" "" "--headers" "vtkAbstractGridConnectivity.h;vtkAttributeSmoothingFilter.h;vtkCompositeDataGeometryFilter.h;vtkDataSetRegionSurfaceFilter.h;vtkDataSetSurfaceFilter.h;vtkExplicitStructuredGridSurfaceFilter.h;vtkGeometryFilter.h;vtkImageDataGeometryFilter.h;vtkImageDataToUniformGrid.h;vtkLinearToQuadraticCellsFilter.h;vtkMarkBoundaryFilter.h;vtkProjectSphereFilter.h;vtkRecoverGeometryWireframe.h;vtkRectilinearGridGeometryFilter.h;vtkRectilinearGridPartitioner.h;vtkStructuredAMRGridConnectivity.h;vtkStructuredAMRNeighbor.h;vtkStructuredGridConnectivity.h;vtkStructuredGridGeometryFilter.h;vtkStructuredGridPartitioner.h;vtkStructuredNeighbor.h;vtkStructuredPointsGeometryFilter.h;vtkUnstructuredGridGeometryFilter.h" "/home/dev/feedback/uid19920/build/Filters/Geometry/vtkFiltersGeometryModule.h" "")
+set_tests_properties([=[VTK::FiltersGeometry-HeaderTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4866;add_test;/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4761;_vtk_module_add_header_tests;/home/dev/feedback/uid19920/Filters/Geometry/CMakeLists.txt;26;vtk_module_add_module;/home/dev/feedback/uid19920/Filters/Geometry/CMakeLists.txt;0;")

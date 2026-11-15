@@ -27,6 +27,9 @@ vtkVolumeProperty::vtkVolumeProperty()
   this->UseClippedVoxelIntensity = 0;
   this->ClippedVoxelIntensity = VTK_FLOAT_MIN;
 
+  this->TFClipping = 0;
+  this->TFClippingThreshold = 0.5;
+
   for (int i = 0; i < VTK_MAX_VRCOMP; i++)
   {
     this->ColorChannels[i] = 1;
@@ -125,6 +128,9 @@ void vtkVolumeProperty::DeepCopy(vtkVolumeProperty* p)
   this->SetInterpolationType(p->GetInterpolationType());
   this->SetUseClippedVoxelIntensity(p->GetUseClippedVoxelIntensity());
   this->SetClippedVoxelIntensity(p->GetClippedVoxelIntensity());
+
+  this->SetTFClipping(p->GetTFClipping());
+  this->SetTFClippingThreshold(p->GetTFClippingThreshold());
 
   for (int i = 0; i < VTK_MAX_VRCOMP; i++)
   {
@@ -916,6 +922,9 @@ void vtkVolumeProperty::PrintSelf(ostream& os, vtkIndent indent)
   os << indent
      << "Use Clipped Voxel Intensity: " << (this->UseClippedVoxelIntensity ? "On\n" : "Off\n");
   os << indent << "Clipped Voxel Intensity: " << this->GetClippedVoxelIntensity() << "\n";
+
+  os << indent << "TF Clipping: " << (this->GetTFClipping() ? "On\n" : "Off\n");
+  os << indent << "TF Clipping Threshold: " << this->GetTFClippingThreshold() << "\n";
 
   for (int i = 0; i < VTK_MAX_VRCOMP; i++)
   {

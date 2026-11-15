@@ -1,0 +1,31 @@
+// SPDX-FileCopyrightText: Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen
+// SPDX-License-Identifier: BSD-3-Clause
+#include "Basis_HGrad_EdgeCnBasis.h"
+
+const char *Basis_HGrad_EdgeCnBasis =
+"// Lagrange interpolants of arbitrary order on the reference edge [-1, 1].\n"
+"//\n"
+"// The order[0]+1 Lagrange points are uniformly spaced, with\n"
+"//   x_o = -1 + 2*o/order[0]  for o in [0, order[0]].\n"
+"//\n"
+"// \\a invspc is the inverse of the distance between Lagrange points.\n"
+"// Note that formulae below are written in terms of invspc rather than the\n"
+"// spacing itself: invspc always has 2 for a denominator and so is exactly\n"
+"// representable, while the spacing has order[0] for a denominator and is not.\n"
+"//\n"
+"//   (rr - x_o) / (x_l - x_o) = (rr * invspc - (o - invspc)) / (l - o)\n"
+"RealT invspc = RealT(order[0]) / 2.;\n"
+"\n"
+"for (int ll = 0; ll <= order[0]; ++ll)\n"
+"{\n"
+"  basis[ll] = 1.;\n"
+"  for (int oo = 0; oo <= order[0]; ++oo)\n"
+"  {\n"
+"    if (oo == ll)\n"
+"    {\n"
+"      continue;\n"
+"    }\n"
+"    basis[ll] *= (rr * invspc - (RealT(oo) - invspc)) / RealT(ll - oo);\n"
+"  }\n"
+"}\n"
+"";

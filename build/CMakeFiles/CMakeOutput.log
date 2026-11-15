@@ -1,0 +1,16 @@
+Determining if the C++ compiler supports __atomic_add_fetch builtin completed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/Common/Core/CMakeTmp/Sync/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_1ceb6
+[1/2] /usr/bin/c++   -std=c++17 -fPIE -o CMakeFiles/cmTC_1ceb6.dir/vtkTestSyncBuiltins.cxx.o -c /home/dev/feedback/uid19920/Common/Core/vtkTestSyncBuiltins.cxx
+[2/2] : && /usr/bin/c++  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_1ceb6.dir/vtkTestSyncBuiltins.cxx.o -o cmTC_1ceb6   && :
+
+
+Determining if getsockname accepts socklen_t type  completed with the following output:
+Change Dir: '/home/dev/feedback/uid19920/build/Common/System/CMakeTmp/SocklenT/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /home/dev/.local/bin/ninja -v cmTC_d28b6
+[1/2] /usr/bin/c++   -std=c++17 -fPIE -o CMakeFiles/cmTC_d28b6.dir/vtkTestSocklenT.cxx.o -c /home/dev/feedback/uid19920/Common/System/vtkTestSocklenT.cxx
+[2/2] : && /usr/bin/c++  -Wl,-lc  -Wl,-lc CMakeFiles/cmTC_d28b6.dir/vtkTestSocklenT.cxx.o -o cmTC_d28b6   && :
+
+

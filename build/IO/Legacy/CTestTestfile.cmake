@@ -1,0 +1,8 @@
+# CMake generated Testfile for 
+# Source directory: /home/dev/feedback/uid19920/IO/Legacy
+# Build directory: /home/dev/feedback/uid19920/build/IO/Legacy
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test([=[VTK::IOLegacy-HeaderTest]=] "/home/dev/.local/bin/python" "/home/dev/feedback/uid19920/Testing/Core/HeaderTesting.py" "/home/dev/feedback/uid19920/IO/Legacy" "--export-macro" "" "--headers" "vtkCompositeDataReader.h;vtkCompositeDataWriter.h;vtkDataObjectReader.h;vtkDataObjectWriter.h;vtkDataReader.h;vtkDataSetReader.h;vtkDataSetWriter.h;vtkDataWriter.h;vtkGenericDataObjectReader.h;vtkGenericDataObjectWriter.h;vtkGraphReader.h;vtkGraphWriter.h;vtkLegacyCellGridReader.h;vtkLegacyCellGridWriter.h;vtkLegacyStatisticalModelReader.h;vtkLegacyStatisticalModelWriter.h;vtkPixelExtentIO.h;vtkPolyDataReader.h;vtkPolyDataWriter.h;vtkRectilinearGridReader.h;vtkRectilinearGridWriter.h;vtkSimplePointsReader.h;vtkSimplePointsWriter.h;vtkStructuredGridReader.h;vtkStructuredGridWriter.h;vtkStructuredPointsReader.h;vtkStructuredPointsWriter.h;vtkTableReader.h;vtkTableWriter.h;vtkTreeReader.h;vtkTreeWriter.h;vtkUnstructuredGridReader.h;vtkUnstructuredGridWriter.h" "/home/dev/feedback/uid19920/build/IO/Legacy/vtkIOLegacyModule.h" "")
+set_tests_properties([=[VTK::IOLegacy-HeaderTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4866;add_test;/home/dev/feedback/uid19920/CMake/vtkModule.cmake;4761;_vtk_module_add_header_tests;/home/dev/feedback/uid19920/IO/Legacy/CMakeLists.txt;36;vtk_module_add_module;/home/dev/feedback/uid19920/IO/Legacy/CMakeLists.txt;0;")

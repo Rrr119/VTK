@@ -1,0 +1,3 @@
+/home/dev/feedback/uid19920/build-example/CMakeFiles/TFClippingExample.dir
+/home/dev/feedback/uid19920/build-example/CMakeFiles/edit_cache.dir
+/home/dev/feedback/uid19920/build-example/CMakeFiles/rebuild_cache.dir

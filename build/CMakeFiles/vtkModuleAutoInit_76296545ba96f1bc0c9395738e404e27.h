@@ -1,0 +1,5 @@
+#define vtkFiltersCore_AUTOINIT 1(vtkFiltersParallelDIY2)
+#define vtkFiltersParallel_AUTOINIT 1(vtkFiltersParallelDIY2)
+#define vtkRenderingCore_AUTOINIT 2(vtkInteractionStyle,vtkRenderingOpenGL2)
+#define vtkRenderingLabel_AUTOINIT 1(vtkRenderingOpenGL2)
+#define vtkRenderingVolume_AUTOINIT 1(vtkRenderingVolumeOpenGL2)

@@ -1,0 +1,2 @@
+#define vtkRenderingCore_AUTOINIT 3(vtkInteractionStyle,vtkRenderingOpenGL2,vtkRenderingUI)
+#define vtkRenderingLabel_AUTOINIT 1(vtkRenderingOpenGL2)
